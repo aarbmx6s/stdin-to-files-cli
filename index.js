@@ -1,12 +1,11 @@
 const fs = require('fs');
-const readline = require('readline');
 
-function onError(error) {
-    console.log(error);
-}
 function onComplete(data) {
-    console.log('stdin-to-files:');
-    data.outs.forEach(f => console.log(' ' + f));
+    return new Promise(resolve => {
+        console.log('stdin-to-files-cli:');
+        data.outs.forEach(f => console.log(' ' + f));
+        resolve(data);
+    });
 }
 function saveToFile(data, file) {
     return new Promise((resolve, reject) => {
@@ -25,24 +24,6 @@ function wrapData(data) {
     return new Promise((resolve, reject) => {
         data.wrapped = data.before + data.input + data.after;
         resolve(data);
-    });
-}
-function readInput(data) {
-    return new Promise((resolve, reject) => {
-        let rli = readline.createInterface({
-            input: process.stdin,
-            output: process.stdout,
-            terminal: false
-        });
-        let input = '';
-
-        rli.on('line', l => {
-            input += l + '\r\n';
-        });
-        rli.on('close', () => {
-            data.input = input;
-            resolve(data);
-        });
     });
 }
 function checkArguments(data) {
@@ -95,4 +76,6 @@ function checkArguments(data) {
     });
 }
 
-checkArguments({ argv:process.argv }).then(readInput).then(wrapData).then(saveToFiles).then(onComplete).catch(onError);
+module.exports.run = function (input) {
+    return checkArguments({ input, argv:process.argv }).then(wrapData).then(saveToFiles).then(onComplete);
+};

@@ -11,7 +11,6 @@ example with [Browserify](http://browserify.org/) (Windows):
 `browserify js/index.js | stdin-to-files-cli -b "(()=>{" -a "})()" -o a/a.js b/b.js`
 
 where<br>
-**-b** - the string which will be appended before data<br>
-**-a** - the string which will be appended after data<br>
 **-o** - output files separated by space<br>
-
+**-b** - the string which will be appended before data (optional)<br>
+**-a** - the string which will be appended after data (optional)<br>
