@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {},
   "bin": {
-    "concat-files-cli": "./bin/stdin-to-files-cli.js"
+    "stdin-to-files-cli": "./bin/stdin-to-files-cli.js"
   },
   "preferGlobal": true,
   "repository": {
