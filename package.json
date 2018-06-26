@@ -1,0 +1,21 @@
+{
+  "name": "stdin-to-files-cli",
+  "version": "1.0.0",
+  "description": "npm package is for reading data from a process stream (stdin) and saving data into files.",
+  "main": "index.js",
+  "scripts": {},
+  "bin": {
+    "concat-files-cli": "./bin/stdin-to-files-cli.js"
+  },
+  "preferGlobal": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aarbmx6s/stdin-to-files.git"
+  },
+  "author": "Kostia Svystun <aarbmx6s@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aarbmx6s/stdin-to-files/issues"
+  },
+  "homepage": "https://github.com/aarbmx6s/stdin-to-files#readme"
+}
