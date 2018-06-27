@@ -1,6 +1,6 @@
 {
   "name": "stdin-to-files-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "npm package is for reading data from a process stream (stdin) and saving data into files.",
   "keywords": [
     "stdin-to-files-cli",
