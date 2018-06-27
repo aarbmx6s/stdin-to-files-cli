@@ -2,7 +2,7 @@ const fs = require('fs');
 
 function onComplete(data) {
     return new Promise(resolve => {
-        console.log('stdin-to-files-cli:');
+        console.log('The stdin-to-files-cli has saved data into:');
         data.outs.forEach(f => console.log(' ' + f));
         resolve(data);
     });

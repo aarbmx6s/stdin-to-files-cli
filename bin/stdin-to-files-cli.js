@@ -7,7 +7,7 @@ function onError(error) {
     console.log(error);
 }
 function onComplete(data) {
-    console.log('complete');
+    //-
 }
 function readInput() {
     return new Promise((resolve, reject) => {
@@ -24,6 +24,8 @@ function readInput() {
         rli.on('close', () => {
             resolve(input);
         });
+
+        console.log('The stdin-to-files-cli waiting for input via stdin.');
     });
 }
 
