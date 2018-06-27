@@ -17,7 +17,7 @@
   "preferGlobal": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aarbmx6s/stdin-to-files.git"
+    "url": "git+https://github.com/aarbmx6s/stdin-to-files-cli.git"
   },
   "author": "Kostia Svystun <aarbmx6s@gmail.com>",
   "license": "ISC",
